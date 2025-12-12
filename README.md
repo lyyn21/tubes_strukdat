@@ -78,14 +78,16 @@ Langkah-langkah
 
 Clone Repository:
 
-git clone [https://github.com/username-anda/nama-repo.git](https://github.com/username-anda/nama-repo.git)
-cd nama-repo
+git clone [https://github.com/lyyn21/tubes_strukdat.git](https://github.com/lyyn21/tubes_strukdat.git)
+cd tubes_strukdat
+
 
 
 Compile Program:
 Buka terminal di folder proyek, lalu jalankan perintah berikut:
 
 g++ main.cpp music_player.cpp -o music_app
+
 
 
 (Catatan: Jangan hanya meng-compile main.cpp saja, error linker akan terjadi)
@@ -97,9 +99,11 @@ Windows:
 music_app.exe
 
 
+
 Linux / Mac:
 
 ./music_app
+
 
 
 🔑 Akun Demo (Login Credentials)
@@ -138,17 +142,17 @@ Nama Anggota
 
 NIM
 
-[Nama Anggota 1]
+$$Nama Anggota 1$$
 
-[NIM]
+$$NIM$$
 
-[Nama Anggota 2]
+$$Nama Anggota 2$$
 
-[NIM]
+$$NIM$$
 
-[Nama Anggota 3]
+$$Nama Anggota 3$$
 
-[NIM]
+$$NIM$$
 
 Catatan:
 Proyek ini dibuat untuk tujuan pendidikan sebagai bagian dari evaluasi mata kuliah Struktur Data.
