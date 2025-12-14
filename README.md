@@ -1,104 +1,132 @@
-🎵 Console Music Player (Aplikasi Pemutar Musik)
+# 🎵 Console Music Player
 
-Tugas Besar Mata Kuliah Struktur Data (CDK2AAB4)
+**Tugas Besar Mata Kuliah Struktur Data (CDK2AAB4)**
 Semester Ganjil 2025/2026
 
-📖 Deskripsi Proyek
+---
 
-Console Music Player adalah simulasi aplikasi pemutar musik backend berbasis Command Line Interface (CLI). Proyek ini dikembangkan untuk mendemonstrasikan penerapan berbagai struktur data dalam pengelolaan memori yang efisien untuk fitur pemutar musik modern.
+## 📌 Deskripsi Singkat
 
-Aplikasi ini memisahkan peran akses menjadi Admin (Pengelola Data) dan User (Penikmat Musik) dengan sistem autentikasi sederhana.
+**Console Music Player** adalah aplikasi pemutar musik berbasis **Command Line Interface (CLI)** yang mensimulasikan sistem backend pemutar musik modern. Proyek ini dibuat untuk menunjukkan penerapan **struktur data** dalam pengelolaan lagu secara efisien.
 
-🚀 Fitur & Struktur Data
+Aplikasi memiliki dua peran pengguna:
 
-Aplikasi ini mengintegrasikan tiga struktur data utama sesuai spesifikasi tugas besar.
+* **Admin** → Mengelola data lagu
+* **User** → Menikmati musik (play, playlist, queue, dll)
 
-Doubly Linked List (Library & Playlist)
-Digunakan untuk menyimpan daftar lagu utama dan playlist pengguna.
-Struktur ini memungkinkan navigasi lagu dua arah (Next dan Previous) secara efisien serta penghapusan data di tengah list tanpa menggeser memori.
+---
 
-Stack / Tumpukan (History)
-Digunakan untuk fitur riwayat pemutaran lagu.
-Menerapkan prinsip LIFO (Last In First Out), di mana lagu yang terakhir diputar akan berada di posisi paling atas.
+## 🧠 Struktur Data yang Digunakan
 
-Queue / Antrian (Song Queue)
-Digunakan untuk fitur antrian prioritas (Add to Queue).
-Menerapkan prinsip FIFO (First In First Out), di mana lagu yang ditambahkan lebih dahulu akan diputar lebih dulu sebelum kembali ke playlist atau library.
+Aplikasi ini menggunakan **3 struktur data utama** sesuai ketentuan tugas besar:
 
-✨ Fitur Unggulan Lainnya
+### 1. Doubly Linked List (Library & Playlist)
 
-Smart Recommendation Logic
-Saat lagu selesai diputar, tombol Next bekerja dengan alur berikut:
-Jika Queue tidak kosong, sistem akan memutar lagu dari Queue.
-Jika Queue kosong, pemutaran dilanjutkan ke Playlist.
-Jika dalam mode Library, sistem akan merekomendasikan lagu dengan genre yang sama, dan jika tidak tersedia maka berdasarkan artis yang sama.
+* Menyimpan daftar lagu dan playlist
+* Mendukung navigasi **Next / Previous**
+* Efisien untuk hapus/tambah lagu di tengah list
 
-Sorting (Pengurutan)
-Menggunakan algoritma Bubble Sort untuk mengurutkan lagu berdasarkan judul (A–Z) atau tahun rilis.
+### 2. Stack (History Pemutaran)
 
-Sequential Search
-Digunakan untuk mencari lagu berdasarkan kata kunci.
+* Menyimpan riwayat lagu yang sudah diputar
+* Menggunakan prinsip **LIFO (Last In First Out)**
 
-Tampilan Rapi
-Output tabel diformat menggunakan library <iomanip> agar kolom lurus dan mudah dibaca.
+### 3. Queue (Antrian Lagu)
 
-📂 Struktur Modular File
+* Menyimpan lagu yang diprioritaskan untuk diputar berikutnya
+* Menggunakan prinsip **FIFO (First In First Out)**
 
-Proyek ini menerapkan modular programming untuk menjaga kerapihan dan keterbacaan kode.
+---
 
-music_player.h
-Header file yang berisi deklarasi struct (Song, Node) dan class (SongList, HistoryStack, SongQueue).
+## ✨ Fitur Utama
 
-music_player.cpp
-Implementation file yang berisi logika fungsi serta algoritma struktur data.
+* 🎶 **Play Music** (Library & Playlist)
+* ⏭️ **Smart Next Song Logic**
 
-main.cpp
-Program utama yang berisi menu antarmuka, sistem login, dan logika pemutar musik.
+  * Putar Queue jika ada
+  * Jika tidak, lanjut ke Playlist
+  * Mode Library: rekomendasi genre → artis
+* 📜 **Riwayat Pemutaran (History)**
+* 📥 **Add to Queue**
+* 🔍 **Search Lagu** (Sequential Search)
+* 🔃 **Sorting Lagu** (Bubble Sort)
 
-🛠️ Cara Instalasi & Menjalankan
+  * Berdasarkan Judul (A–Z)
+  * Berdasarkan Tahun Rilis
+* 📊 **Tampilan Tabel Rapi** (menggunakan `<iomanip>`)
 
-Karena program terdiri dari beberapa file, proses kompilasi harus dilakukan secara bersamaan.
+---
 
-Prasyarat
-Pastikan compiler C++ (MinGW atau G++) sudah terpasang.
+## 📂 Struktur File
 
-Langkah-langkah
+Proyek dibuat secara **modular** agar kode rapi dan mudah dipahami:
 
-Clone repository
+| File               | Deskripsi                           |
+| ------------------ | ----------------------------------- |
+| `music_player.h`   | Deklarasi struct & class            |
+| `music_player.cpp` | Implementasi logika & struktur data |
+| `main.cpp`         | Menu, login, dan alur program       |
+
+---
+
+## ⚙️ Cara Menjalankan Program
+
+### Prasyarat
+
+* Compiler C++ (G++ / MinGW)
+
+### Langkah-langkah
+
+1. **Clone Repository**
+
+```bash
 git clone https://github.com/lyyn21/tubes_strukdat.git
-
 cd tubes_strukdat
+```
 
-Compile program
+2. **Compile Program**
+
+```bash
 g++ main.cpp music_player.cpp -o music_app
+```
 
-Jalankan aplikasi
+> ⚠️ Jangan hanya compile `main.cpp`, karena akan terjadi error linker.
 
-Windows
+3. **Jalankan Aplikasi**
+
+**Windows**
+
+```bash
 music_app.exe
+```
 
-Linux / Mac
+**Linux / Mac**
+
+```bash
 ./music_app
+```
 
-🔑 Akun Login Aplikasi
+---
 
-Admin
-Username: admin
-Password: admin123
-Akses: CRUD lagu dan sorting library
+## 🔐 Akun Demo
 
-User
-Username: user
-Password: user123
-Akses: Play lagu, playlist, queue, history, dan pencarian
+| Role  | Username | Password | Akses                                  |
+| ----- | -------- | -------- | -------------------------------------- |
+| Admin | admin    | admin123 | CRUD lagu, sorting library             |
+| User  | user     | user123  | Play, playlist, queue, history, search |
 
-Ketik exit pada input username untuk keluar dari aplikasi.
+> Ketik **`exit`** pada username untuk keluar dari aplikasi.
 
-👥 Anggota Kelompok 11
+---
 
-Fauzi Romadhoni - 103132400025
-Aditya Dwi Aryanto - 103132400027
-Khairun Fahmi - 103132400035
+## 👥 Anggota Kelompok 11
 
-Catatan
-Proyek ini dibuat untuk tujuan pendidikan sebagai bagian dari evaluasi mata kuliah Struktur Data.
+* Fauzi Romadhoni — 103132400025
+* Aditya Dwi Aryanto — 103132400027
+* Khairun Fahmi — 103132400035
+
+---
+
+## 📝 Catatan
+
+Proyek ini dibuat **khusus untuk keperluan akademik** sebagai evaluasi mata kuliah **Struktur Data**.
