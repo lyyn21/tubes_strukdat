@@ -1,6 +1,7 @@
 🎵 Console Music Player (Aplikasi Pemutar Musik)
 
-Tugas Besar Mata Kuliah Struktur Data (CDK2AAB4) > Semester Ganjil 2025/2026
+Tugas Besar Mata Kuliah Struktur Data (CDK2AAB4)
+Semester Ganjil 2025/2026
 
 📖 Deskripsi Proyek
 
@@ -10,144 +11,93 @@ Aplikasi ini memisahkan peran akses menjadi Admin (Pengelola Data) dan User (Pen
 
 🚀 Fitur & Struktur Data
 
-Aplikasi ini mengintegrasikan 3 Struktur Data Utama sesuai spesifikasi tugas besar:
+Aplikasi ini mengintegrasikan tiga struktur data utama sesuai spesifikasi tugas besar.
 
-1. Doubly Linked List (Library & Playlist)
-
+Doubly Linked List (Library & Playlist)
 Digunakan untuk menyimpan daftar lagu utama dan playlist pengguna.
+Struktur ini memungkinkan navigasi lagu dua arah (Next dan Previous) secara efisien serta penghapusan data di tengah list tanpa menggeser memori.
 
-Alasan: Memungkinkan navigasi lagu dua arah (Next dan Previous) secara efisien serta penghapusan data di tengah list tanpa menggeser memori.
+Stack / Tumpukan (History)
+Digunakan untuk fitur riwayat pemutaran lagu.
+Menerapkan prinsip LIFO (Last In First Out), di mana lagu yang terakhir diputar akan berada di posisi paling atas.
 
-2. Stack / Tumpukan (History)
-
-Digunakan untuk fitur Riwayat Pemutaran.
-
-Prinsip LIFO (Last In First Out): Lagu yang baru saja selesai diputar akan muncul di urutan paling atas riwayat.
-
-3. Queue / Antrian (Song Queue)
-
-Digunakan untuk fitur Antrian Prioritas (Add to Queue).
-
-Prinsip FIFO (First In First Out): User dapat memilih lagu untuk diputar "berikutnya". Sistem akan memprioritaskan lagu di dalam Queue sebelum kembali memutar lagu dari Playlist/Library.
+Queue / Antrian (Song Queue)
+Digunakan untuk fitur antrian prioritas (Add to Queue).
+Menerapkan prinsip FIFO (First In First Out), di mana lagu yang ditambahkan lebih dahulu akan diputar lebih dulu sebelum kembali ke playlist atau library.
 
 ✨ Fitur Unggulan Lainnya
 
-Smart Recommendation Logic: Saat lagu habis, tombol Next bekerja dengan logika cerdas:
+Smart Recommendation Logic
+Saat lagu selesai diputar, tombol Next bekerja dengan alur berikut:
+– Jika Queue tidak kosong, sistem akan memutar lagu dari Queue
+– Jika Queue kosong, pemutaran dilanjutkan ke Playlist
+– Jika dalam mode Library, sistem akan merekomendasikan lagu dengan genre yang sama, dan jika tidak tersedia maka berdasarkan artis yang sama
 
-Cek Queue: Jika ada antrian, putar antrian.
+Sorting (Pengurutan)
+Menggunakan algoritma Bubble Sort untuk mengurutkan lagu berdasarkan judul (A–Z) atau tahun rilis.
 
-Cek Playlist: Jika tidak ada antrian, lanjut urutan playlist.
+Sequential Search
+Digunakan untuk mencari lagu berdasarkan kata kunci.
 
-Auto-Recommend: Jika mode library, cari lagu dengan Genre yang sama. Jika tidak ada, cari Artis yang sama.
-
-Sorting (Pengurutan): Menggunakan algoritma Bubble Sort untuk mengurutkan lagu berdasarkan Judul (A-Z) atau Tahun Rilis.
-
-Sequential Search: Mencari lagu berdasarkan kata kunci.
-
-Tampilan Rapi: Output tabel diformat menggunakan library <iomanip> agar kolom lurus dan mudah dibaca.
+Tampilan Rapi
+Output tabel diformat menggunakan library <iomanip> agar kolom lurus dan mudah dibaca.
 
 📂 Struktur Modular File
 
-Proyek ini menerapkan Modular Programming untuk menjaga kebersihan kode:
-
-File
-
-Deskripsi
+Proyek ini menerapkan modular programming untuk menjaga kerapihan dan keterbacaan kode.
 
 music_player.h
-
-Header File: Berisi deklarasi Struct (Song, Node) dan Class (SongList, HistoryStack, SongQueue).
+Header file yang berisi deklarasi struct (Song, Node) dan class (SongList, HistoryStack, SongQueue).
 
 music_player.cpp
-
-Implementation File: Berisi logika fungsi dan algoritma struktur data.
+Implementation file yang berisi logika fungsi serta algoritma struktur data.
 
 main.cpp
-
-Main Program: Berisi Menu UI, Sistem Login, dan Logika Pemutar.
+Program utama yang berisi menu antarmuka, sistem login, dan logika pemutar musik.
 
 🛠️ Cara Instalasi & Menjalankan
 
-Karena program ini terdiri dari beberapa file, Anda harus mengompilasinya secara bersamaan.
+Karena program terdiri dari beberapa file, proses kompilasi harus dilakukan secara bersamaan.
 
 Prasyarat
-
-Pastikan Anda sudah menginstal compiler C++ (MinGW/G++).
+Pastikan compiler C++ (MinGW atau G++) sudah terpasang.
 
 Langkah-langkah
 
-Clone Repository:
+Clone repository
+git clone https://github.com/lyyn21/tubes_strukdat.git
 
-git clone [https://github.com/lyyn21/tubes_strukdat.git](https://github.com/lyyn21/tubes_strukdat.git)
 cd tubes_strukdat
 
-
-
-Compile Program:
-Buka terminal di folder proyek, lalu jalankan perintah berikut:
-
+Compile program
 g++ main.cpp music_player.cpp -o music_app
 
+Jalankan aplikasi
 
-
-(Catatan: Jangan hanya meng-compile main.cpp saja, error linker akan terjadi)
-
-Jalankan Aplikasi:
-
-Windows:
-
+Windows
 music_app.exe
 
-
-
-Linux / Mac:
-
+Linux / Mac
 ./music_app
 
-
-
-🔑 Akun Demo (Login Credentials)
-
-Gunakan akun berikut untuk mengakses fitur aplikasi:
-
-Role
-
-Username
-
-Password
-
-Akses Fitur
+🔑 Akun Login Aplikasi
 
 Admin
-
-admin
-
-admin123
-
-CRUD Lagu, Sorting Library.
+Username: admin
+Password: admin123
+Akses: CRUD lagu dan sorting library
 
 User
+Username: user
+Password: user123
+Akses: Play lagu, playlist, queue, history, dan pencarian
 
-user
-
-user123
-
-Play, Playlist, Queue, History, Search.
-
-(Ketik exit pada username untuk menutup aplikasi)
+Ketik “exit” pada input username untuk keluar dari aplikasi.
 
 👥 Anggota Kelompok 11
 
-Fauzi Romadhoni - 103132400025
-
-
-Aditya Dwi Aryanto - 103132400027
-
-
-Khairun Fahmi - 103132400035
-
-
-
-
-Catatan:
+Fauzi Romadhoni – 103132400025
+Aditya Dwi Aryanto – 103132400027
+Khairun Fahmi – 103132400035
+Catatan
 Proyek ini dibuat untuk tujuan pendidikan sebagai bagian dari evaluasi mata kuliah Struktur Data.
