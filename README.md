@@ -136,23 +136,21 @@ Play, Playlist, Queue, History, Search.
 
 (Ketik exit pada username untuk menutup aplikasi)
 
-👥 Anggota Kelompok
+👥 Anggota Kelompok 11
 
-Nama Anggota
+Fauzi Romadhoni
 
-NIM
+103132400025
 
-$$Nama Anggota 1$$
+Aditya Dwi Aryanto
 
-$$NIM$$
+103132400027
 
-$$Nama Anggota 2$$
+Khairun Fahmi
 
-$$NIM$$
+103132400035
 
-$$Nama Anggota 3$$
 
-$$NIM$$
 
 Catatan:
 Proyek ini dibuat untuk tujuan pendidikan sebagai bagian dari evaluasi mata kuliah Struktur Data.
