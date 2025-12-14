@@ -29,9 +29,13 @@ Menerapkan prinsip FIFO (First In First Out), di mana lagu yang ditambahkan lebi
 ✨ Fitur Unggulan Lainnya
 
 Smart Recommendation Logic
+
 Saat lagu selesai diputar, tombol Next bekerja dengan alur berikut:
+
 Jika Queue tidak kosong, sistem akan memutar lagu dari Queue.
+
 Jika Queue kosong, pemutaran dilanjutkan ke Playlist.
+
 Jika dalam mode Library, sistem akan merekomendasikan lagu dengan genre yang sama, dan jika tidak tersedia maka berdasarkan artis yang sama.
 
 Sorting (Pengurutan)
