@@ -83,14 +83,19 @@ Linux / Mac
 🔑 Akun Login Aplikasi
 
 Admin
+
 Username: admin
 
 Password: admin123
+
 Akses: CRUD lagu dan sorting library
 
 User
+
 Username: user
+
 Password: user123
+
 Akses: Play lagu, playlist, queue, history, dan pencarian
 
 Ketik exit pada input username untuk keluar dari aplikasi.
@@ -98,7 +103,9 @@ Ketik exit pada input username untuk keluar dari aplikasi.
 👥 Anggota Kelompok 11
 
 Fauzi Romadhoni - 103132400025
+
 Aditya Dwi Aryanto - 103132400027
+
 Khairun Fahmi - 103132400035
 
 Catatan
