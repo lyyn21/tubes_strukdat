@@ -52,12 +52,15 @@ Output tabel diformat menggunakan library <iomanip> agar kolom lurus dan mudah d
 Proyek ini menerapkan modular programming untuk menjaga kerapihan dan keterbacaan kode.
 
 music_player.h
+
 Header file yang berisi deklarasi struct (Song, Node) dan class (SongList, HistoryStack, SongQueue).
 
 music_player.cpp
+
 Implementation file yang berisi logika fungsi serta algoritma struktur data.
 
 main.cpp
+
 Program utama yang berisi menu antarmuka, sistem login, dan logika pemutar musik.
 
 🛠️ Cara Instalasi & Menjalankan
@@ -65,16 +68,20 @@ Program utama yang berisi menu antarmuka, sistem login, dan logika pemutar musik
 Karena program terdiri dari beberapa file, proses kompilasi harus dilakukan secara bersamaan.
 
 Prasyarat
+
 Pastikan compiler C++ (MinGW atau G++) sudah terpasang.
 
 Langkah-langkah
 
+
 Clone repository
+
 git clone https://github.com/lyyn21/tubes_strukdat.git
 
 cd tubes_strukdat
 
 Compile program
+
 g++ main.cpp music_player.cpp -o music_app
 
 Jalankan aplikasi
