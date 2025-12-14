@@ -63,37 +63,7 @@ main.cpp:
 
 Program utama yang berisi menu antarmuka, sistem login, dan logika pemutar musik.
 
-🛠️ Cara Instalasi & Menjalankan
 
-Karena program terdiri dari beberapa file, proses kompilasi harus dilakukan secara bersamaan.
-
-Prasyarat:
-Pastikan compiler C++ (MinGW atau G++) sudah terpasang.
-
-
-Langkah-langkah
-
-
-
-Clone repository
-
-git clone https://github.com/lyyn21/tubes_strukdat.git
-
-cd tubes_strukdat
-
-Compile program
-
-g++ main.cpp music_player.cpp -o music_app
-
-Jalankan aplikasi
-
-Windows
-
-music_app.exe
-
-Linux / Mac
-
-./music_app
 
 🔑 Akun Login Aplikasi
 
@@ -123,5 +93,3 @@ Aditya Dwi Aryanto - 103132400027
 
 Khairun Fahmi - 103132400035
 
-Catatan
-Proyek ini dibuat untuk tujuan pendidikan sebagai bagian dari evaluasi mata kuliah Struktur Data.
