@@ -29,9 +29,9 @@ Menerapkan prinsip FIFO (First In First Out), di mana lagu yang ditambahkan lebi
 
 Smart Recommendation Logic
 Saat lagu selesai diputar, tombol Next bekerja dengan alur berikut:
-– Jika Queue tidak kosong, sistem akan memutar lagu dari Queue
-– Jika Queue kosong, pemutaran dilanjutkan ke Playlist
-– Jika dalam mode Library, sistem akan merekomendasikan lagu dengan genre yang sama, dan jika tidak tersedia maka berdasarkan artis yang sama
+Jika Queue tidak kosong, sistem akan memutar lagu dari Queue.
+Jika Queue kosong, pemutaran dilanjutkan ke Playlist.
+Jika dalam mode Library, sistem akan merekomendasikan lagu dengan genre yang sama, dan jika tidak tersedia maka berdasarkan artis yang sama.
 
 Sorting (Pengurutan)
 Menggunakan algoritma Bubble Sort untuk mengurutkan lagu berdasarkan judul (A–Z) atau tahun rilis.
@@ -92,12 +92,13 @@ Username: user
 Password: user123
 Akses: Play lagu, playlist, queue, history, dan pencarian
 
-Ketik “exit” pada input username untuk keluar dari aplikasi.
+Ketik exit pada input username untuk keluar dari aplikasi.
 
 👥 Anggota Kelompok 11
 
-Fauzi Romadhoni – 103132400025
-Aditya Dwi Aryanto – 103132400027
-Khairun Fahmi – 103132400035
+Fauzi Romadhoni - 103132400025
+Aditya Dwi Aryanto - 103132400027
+Khairun Fahmi - 103132400035
+
 Catatan
 Proyek ini dibuat untuk tujuan pendidikan sebagai bagian dari evaluasi mata kuliah Struktur Data.
