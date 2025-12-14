@@ -1,6 +1,7 @@
 🎵 Console Music Player (Aplikasi Pemutar Musik)
 
 Tugas Besar Mata Kuliah Struktur Data (CDK2AAB4)
+
 Semester Ganjil 2025/2026
 
 📖 Deskripsi Proyek
@@ -75,9 +76,11 @@ g++ main.cpp music_player.cpp -o music_app
 Jalankan aplikasi
 
 Windows
+
 music_app.exe
 
 Linux / Mac
+
 ./music_app
 
 🔑 Akun Login Aplikasi
