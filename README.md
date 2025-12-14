@@ -67,7 +67,7 @@ Program utama yang berisi menu antarmuka, sistem login, dan logika pemutar musik
 
 Karena program terdiri dari beberapa file, proses kompilasi harus dilakukan secara bersamaan.
 
-Prasyarat
+Prasyarat:
 Pastikan compiler C++ (MinGW atau G++) sudah terpasang.
 
 
