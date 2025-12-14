@@ -138,17 +138,14 @@ Play, Playlist, Queue, History, Search.
 
 👥 Anggota Kelompok 11
 
-Fauzi Romadhoni
+Fauzi Romadhoni - 103132400025
 
-103132400025
 
-Aditya Dwi Aryanto
+Aditya Dwi Aryanto - 103132400027
 
-103132400027
 
-Khairun Fahmi
+Khairun Fahmi - 103132400035
 
-103132400035
 
 
 
